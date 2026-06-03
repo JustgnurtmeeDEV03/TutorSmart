@@ -25,6 +25,7 @@ public class UserResponse {
     // Factory method: Chuyển đổi từ domain entity sang DTO (from() - người phiên dịch từ Entity sang DTO)
     // Không expose entity ra ngoài API boundary
     // .name(): Chuyển đổi Enum trong Java thành chuỗi String
+
     public static UserResponse from(User user){
         return UserResponse.builder()
                 .id(user.getId())
