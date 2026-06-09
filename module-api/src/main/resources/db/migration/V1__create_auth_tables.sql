@@ -17,6 +17,9 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+COMMENT ON FUNCTION set_updated_at() IS
+        'Trigger function tự động cập nhật updated_at. Dùng chung cho mọi bảng.'
+
 -- ----------------------------------------------------------------
 
 CREATE TABLE users

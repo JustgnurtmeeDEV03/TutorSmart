@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: dossier-postgres
+    container_name: tutorsmart-postgres
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USERNAME}
@@ -13,7 +13,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U dossier_admin -d dossier_db"]
+      test: ["CMD-SHELL", "pg_isready -U tutorsmart_admin -d tutorsmart_db"]
       interval: 10s
       timeout: 5s
       retries: 5

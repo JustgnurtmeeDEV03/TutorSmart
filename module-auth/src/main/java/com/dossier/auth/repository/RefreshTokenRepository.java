@@ -30,6 +30,7 @@ public interface RefreshTokenRepository extends JpaRepository<RefreshToken, UUID
 
     // Scheduled cleanup: Xóa token đã hết hạn để bảng không phình to (Hard Delete)
     @Modifying
+    @Query("DELETE FROM RefreshToken rt WHERE rt.expiresAt < :now")
     @Query("DELETE FROM RefreshToken rt WHERE rt.expireAt < :now")
     void deleteExpiredTokens(@Param("now") OffsetDateTime now);
     // <=> SQL: DELETE FROM refresh_tokens WHERE expires_at < ?

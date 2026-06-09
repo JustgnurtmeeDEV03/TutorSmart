@@ -65,6 +65,7 @@ public class User {
 
     // Tên field là "active" — map xuống cột "is_active"
     // Dùng "active" thay vì "isActive" để tránh Lombok sinh method isIsActive()
+    @Column(name = "is_active", nullable = false)
     @Column(name = "is_acitve", nullable = false)
     @Builder.Default
     private boolean active = true;

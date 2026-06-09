@@ -7,7 +7,7 @@
 
     <parent>
         <groupId>com.dossier</groupId>
-        <artifactId>the-dossier</artifactId>
+        <artifactId>the-tutorsmart</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -42,15 +42,15 @@
         </dependency>
         <dependency>
             <groupId>com.dossier</groupId>
-            <artifactId>module-profile</artifactId>
+            <artifactId>module-student</artifactId>
         </dependency>
         <dependency>
             <groupId>com.dossier</groupId>
-            <artifactId>module-integration</artifactId>
+            <artifactId>module-schedule</artifactId>
         </dependency>
         <dependency>
             <groupId>com.dossier</groupId>
-            <artifactId>module-intelligence</artifactId>
+            <artifactId>module-billing</artifactId>
         </dependency>
         <dependency>
             <groupId>com.dossier</groupId>

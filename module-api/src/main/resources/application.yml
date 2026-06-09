@@ -3,9 +3,9 @@ spring:
     name: the-dossier
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/${DB_NAME:dossier_db}
-    username: ${DB_USERNAME:dossier_admin}
-    password: ${DB_PASSWORD:dossier_pass}
+    url: jdbc:postgresql://localhost:5432/${DB_NAME:tutorsmart_db}
+    username: ${DB_USERNAME:tutorsmart_admin}
+    password: ${DB_PASSWORD:tutorsmart_pass}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2
@@ -30,6 +30,22 @@ server:
 
 app:
   jwt:
+    # Base64-encoded key, tối thiểu 32 bytes cho HS256
+    # Giá trị dưới đây CHỈ dùng cho local dev
+    # Production: set biến môi trường JWT_SECRET với key ngẫu nhiên
     secret: ${JWT_SECRET}
     access-token-expiry: 900000 # 15 phút (ms)
     refresh-token-expiry: 604800000  # 7 ngày (ms)
+
+# Swagger UI config
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    swagger-ui:
+      path: /swagger-ui.html
+    components:
+      security-schemes:
+        bearerAuth:
+          type: http
+          scheme: bearer
+          bearer-format: JWT
