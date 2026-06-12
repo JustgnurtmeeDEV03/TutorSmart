@@ -1,6 +1,6 @@
 spring:
   application:
-    name: the-dossier
+    name: the-tutorsmart
 
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME:tutorsmart_db}

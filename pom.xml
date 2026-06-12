@@ -16,7 +16,7 @@
     <artifactId>the-tutorsmart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>The Dossier</name>
+    <name>The TutorSmart</name>
 
     <modules>
         <module>module-auth</module>
