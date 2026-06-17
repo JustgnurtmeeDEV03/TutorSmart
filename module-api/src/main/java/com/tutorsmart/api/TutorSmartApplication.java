@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication(scanBasePackages = "com.dossier")
-public class DossierApplication {
+public class TutorSmartApplication {
     public static void main(String[] args) {
-        SpringApplication.run(DossierApplication.class, args);
+        SpringApplication.run(TutorSmartApplication.class, args);
     }
 }
